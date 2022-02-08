@@ -12,11 +12,12 @@ import deviceinfo from '../../DeviceInfo';
 import Geolocation from '@react-native-community/geolocation';
 import { styles } from './Style';
 import LinearGradient from 'react-native-linear-gradient';
+import { NativeModules } from 'react-native';
+const { DeviceDetailsModule } = NativeModules;
 export const IMAGENAME = require('../../iR.png');
 const showAnimation = "slideInUp"
 const hideAnimation = "slideOutDown"
 const window = Dimensions.get('window');
-
 
 
 const Login = () => {
@@ -60,7 +61,6 @@ const Login = () => {
     setFormValue((st) => ({ ...st, [type]: value }));
 
   }
-
   const onProceedToLogin = () => {
     setIsLogin(!isLogin)
     toggle()
@@ -77,7 +77,9 @@ const Login = () => {
       navigate('Home')
     }
   }, [loginSuccess]);
-  useEffect(() => {
+  useEffect(async () => {
+    const devicetype = await DeviceDetailsModule.getDeviceModel()
+    console.log("devicetype", devicetype);
     Geolocation.getCurrentPosition(info => {
       dispatch(setLocationValue({ latitude: info.coords.latitude, longitude: info.coords.longitude }))
     })
@@ -107,7 +109,6 @@ const Login = () => {
           </View>
         </Modal>
         <View>
-
           <View style={styles.parent}>
             <View >
               <LinearGradient style={styles.child} colors={[Colors.primary, '#e2133a', '#c1064a']} >
@@ -202,7 +203,6 @@ const Login = () => {
           }
         </View>
       </KeyboardAvoidingView>
-
     </SafeAreaView>
   );
 };

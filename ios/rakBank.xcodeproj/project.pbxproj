@@ -12,6 +12,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		218454A5AD24C995CAD9CCB6 /* libPods-rakBank-rakBankTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEAECAE4B6A4C5E47D72AC1 /* libPods-rakBank-rakBankTests.a */; };
+		51BCDC4B27B0772200D739B7 /* DeviceDetailsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCDC4A27B0772200D739B7 /* DeviceDetailsModule.swift */; };
+		51BCDC4D27B07A8100D739B7 /* DeviceDetailsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BCDC4C27B07A8100D739B7 /* DeviceDetailsModule.m */; };
 		5748820E41DCD9ECEEE408B6 /* libPods-rakBank.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C99234DDEA12956F895247D /* libPods-rakBank.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rakBank/main.m; sourceTree = "<group>"; };
 		1EEAECAE4B6A4C5E47D72AC1 /* libPods-rakBank-rakBankTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rakBank-rakBankTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C99234DDEA12956F895247D /* libPods-rakBank.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rakBank.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BCDC4927B0772100D739B7 /* rakBank-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rakBank-Bridging-Header.h"; sourceTree = "<group>"; };
+		51BCDC4A27B0772200D739B7 /* DeviceDetailsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceDetailsModule.swift; path = rakBank/DeviceDetailsModule.swift; sourceTree = "<group>"; };
+		51BCDC4C27B07A8100D739B7 /* DeviceDetailsModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DeviceDetailsModule.m; path = rakBank/DeviceDetailsModule.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rakBank/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		998A6961FB8FF36CBE6EB7B1 /* Pods-rakBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rakBank.debug.xcconfig"; path = "Target Support Files/Pods-rakBank/Pods-rakBank.debug.xcconfig"; sourceTree = "<group>"; };
 		B09A8DC77CF8B4097115465F /* Pods-rakBank-rakBankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rakBank-rakBankTests.release.xcconfig"; path = "Target Support Files/Pods-rakBank-rakBankTests/Pods-rakBank-rakBankTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,8 +95,11 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				51BCDC4A27B0772200D739B7 /* DeviceDetailsModule.swift */,
+				51BCDC4C27B07A8100D739B7 /* DeviceDetailsModule.m */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				51BCDC4927B0772100D739B7 /* rakBank-Bridging-Header.h */,
 			);
 			name = rakBank;
 			sourceTree = "<group>";
@@ -104,7 +112,6 @@
 				E48680D12B6BB0B1C5413AFA /* Pods-rakBank-rakBankTests.debug.xcconfig */,
 				B09A8DC77CF8B4097115465F /* Pods-rakBank-rakBankTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +215,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -411,6 +418,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BCDC4D27B07A8100D739B7 /* DeviceDetailsModule.m in Sources */,
+				51BCDC4B27B0772200D739B7 /* DeviceDetailsModule.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -431,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E48680D12B6BB0B1C5413AFA /* Pods-rakBank-rakBankTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B09A8DC77CF8B4097115465F /* Pods-rakBank-rakBankTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = rakBankTests/Info.plist;
@@ -498,6 +509,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rakBank;
+				SWIFT_OBJC_BRIDGING_HEADER = "rakBank-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +535,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rakBank;
+				SWIFT_OBJC_BRIDGING_HEADER = "rakBank-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
